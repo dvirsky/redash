@@ -162,8 +162,8 @@ function QueryResultService($resource, $timeout, $q) {
 
     getLog() {
       if (!this.query_result.data ||
-          !this.query_result.data.log ||
-          this.query_result.data.log.length === 0) {
+        !this.query_result.data.log ||
+        this.query_result.data.log.length === 0) {
         return null;
       }
 
@@ -458,7 +458,7 @@ function QueryResultService($resource, $timeout, $q) {
         } else if (this.getStatus() !== 'failed') {
           $timeout(() => {
             this.refreshStatus(query);
-          }, 3000);
+          }, 100);
         }
       }, (error) => {
         logger('Connection error', error);
