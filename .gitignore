@@ -1,4 +1,5 @@
 .venv
+env
 .cache
 .coverage.*
 .coveralls.yml
